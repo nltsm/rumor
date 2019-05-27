@@ -2454,6 +2454,9 @@ div.jfilestyle label:hover {
 .thread {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.14);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .thread_image {
@@ -2482,6 +2485,7 @@ div.jfilestyle label:hover {
 .thread_content {
   padding: 20px 18px 23px 17px;
   background: #FFFFFF;
+  flex-grow: 1;
 }
 
 .thread.__min .thread_content {
@@ -2492,13 +2496,10 @@ div.jfilestyle label:hover {
   font-size: 16px;
   line-height: 23px;
   color: #333333;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
   text-decoration: none;
   display: block;
   padding-right: 45px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  height: 46px;
 }
 
 .thread_title:hover {
