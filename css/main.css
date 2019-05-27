@@ -2492,10 +2492,13 @@ div.jfilestyle label:hover {
   font-size: 16px;
   line-height: 23px;
   color: #333333;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   text-decoration: none;
   display: block;
   padding-right: 45px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 46px;
 }
 
 .thread_title:hover {
