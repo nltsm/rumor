@@ -2483,7 +2483,7 @@ div.jfilestyle label:hover {
 }
 
 .thread_content {
-  padding: 20px 18px 23px 17px;
+  padding: 20px 18px 41px 17px;
   background: #FFFFFF;
   flex-grow: 1;
 }
@@ -2526,9 +2526,15 @@ div.jfilestyle label:hover {
 
 .thread_bottom {
   padding-left: 22px;
+  padding-right: 22px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 18px;
+  position: absolute;
+  bottom: 23px;
+  left: 0;
+  right: 0;
 }
 
 .thread_info {
