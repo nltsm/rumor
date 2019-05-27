@@ -56,7 +56,7 @@
                 isAutoPlay = isAutoPlay === '' || isAutoPlay === 'autoplay' ? true : false,
                 isLoop = $this.get(0).getAttribute('loop'),
                 isLoop = isLoop === '' || isLoop === 'loop' ? true : false,
-                isSupport = false;
+                isSupport = true;
 
             if (typeof audioFile === 'undefined') {
                 $this.find('source').each(function() {
@@ -67,6 +67,8 @@
                     }
                 });
             } else if (canPlayType(audioFile)) isSupport = true;
+            
+            isSupport  = true;
 
             var thePlayer = $('<div class="' + params.classPrefix + '">' + (isSupport ? $('<div>').append($this.eq(0).clone()).html() : '<embed src="' + audioFile + '" width="0" height="0" volume="100" autostart="' + isAutoPlay.toString() + '" loop="' + isLoop.toString() + '" />') + '<div class="' + cssClass.playPause + '" title="' + params.strPlay + '"><a href="#">' + params.strPlay + '</a></div></div>'),
                 theAudio = isSupport ? thePlayer.find('audio') : thePlayer.find('embed'),
