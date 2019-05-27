@@ -654,7 +654,7 @@ div.jfilestyle label:hover {
   font-size: 14px;
   color: #D4302F;
   text-decoration: none;
-  background-image: url(../img/arrow-back.svg);
+  background-image: url("../img/arrow-back.svg");
   background-position: left center;
   background-repeat: no-repeat;
   background-size: 14px 10px;
@@ -747,7 +747,7 @@ div.jfilestyle label:hover {
 }
 
 .create-post_image-del {
-  background-image: url(../img/delete-white.png);
+  background-image: url("../img/delete-white.png");
   background-position: center center;
   background-repeat: no-repeat;
   width: 100%;
@@ -856,7 +856,7 @@ div.jfilestyle label:hover {
   font-size: 13px;
   line-height: 18px;
   color: #888888;
-  background-image: url(../img/location.svg);
+  background-image: url("../img/location.svg");
   background-position: top 3px left;
   background-repeat: no-repeat;
   background-size: 11px 15px;
@@ -1647,7 +1647,7 @@ div.jfilestyle label:hover {
   width: 40px;
   height: 40px;
   border: 1px solid #D4302F;
-  background-image: url(../img/pause.svg);
+  background-image: url("../img/pause.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 8px 12px;
@@ -2226,7 +2226,7 @@ div.jfilestyle label:hover {
   font-size: 13px;
   line-height: 18px;
   color: #888888;
-  background-image: url(../img/location.svg);
+  background-image: url("../img/location.svg");
   background-position: top 3px left;
   background-repeat: no-repeat;
   background-size: 11px 15px;
@@ -2315,7 +2315,7 @@ div.jfilestyle label:hover {
   font-size: 14px;
   color: #D4302F;
   text-decoration: none;
-  background-image: url(../img/arrow-back.svg);
+  background-image: url("../img/arrow-back.svg");
   background-position: left center;
   background-repeat: no-repeat;
   background-size: 14px 10px;
@@ -2639,14 +2639,14 @@ div.jfilestyle label:hover {
   top: 180px;
   width: 36px;
   height: 36px;
-  background-image: url(../img/play.svg);
+  background-image: url("../img/play.svg");
   background-position: center left 14px;
   background-repeat: no-repeat;
   background-size: 10px 12px;
 }
 
 .thread.__min .thread_player .audioplayer.audioplayer-playing .audioplayer-playpause {
-  background-image: url(../img/pause.svg);
+  background-image: url("../img/pause.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 8px 12px;
