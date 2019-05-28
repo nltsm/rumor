@@ -1944,6 +1944,9 @@ div.jfilestyle label:hover {
   width: 17px;
   height: 13px;
   margin-right: 23px;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .post_player-next {
@@ -1954,6 +1957,9 @@ div.jfilestyle label:hover {
   height: 13px;
   margin-left: 23px;
   transform: rotate(180deg);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .post_player .audioplayer > * {
@@ -2489,7 +2495,7 @@ div.jfilestyle label:hover {
 }
 
 .thread.__min .thread_content {
-  padding: 15px 18px 12px 17px;
+  padding: 15px 18px 41px 17px;
 }
 
 .thread_title {
