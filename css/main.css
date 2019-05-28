@@ -1817,10 +1817,16 @@ div.jfilestyle label:hover {
   position: relative;
 }
 
-.post_image {
+.post > a {
   width: 360px;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.post_image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .post_content {
@@ -2465,14 +2471,14 @@ div.jfilestyle label:hover {
   height: 100%;
 }
 
-.thread_image {
+.thread > a {
   background-size: cover;
   background-repeat: no-repeat;
   height: 190px;
   display: block;
 }
 
-.thread_image img {
+.thread_image {
   object-fit: cover;
   width: 100%;
   height: 100%;
