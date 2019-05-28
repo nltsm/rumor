@@ -1817,16 +1817,16 @@ div.jfilestyle label:hover {
   position: relative;
 }
 
-.post > a {
+.post_image {
   width: 360px;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.post_image {
-  object-fit: cover;
+.post_image img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .post_content {
@@ -1950,9 +1950,6 @@ div.jfilestyle label:hover {
   width: 17px;
   height: 13px;
   margin-right: 23px;
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
 }
 
 .post_player-next {
@@ -1963,9 +1960,6 @@ div.jfilestyle label:hover {
   height: 13px;
   margin-left: 23px;
   transform: rotate(180deg);
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
 }
 
 .post_player .audioplayer > * {
