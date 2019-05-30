@@ -1782,6 +1782,15 @@ div.jfilestyle label:hover {
   font: 16px 'SegoeUI';
 }
 
+.next {
+  color: #888888;
+  text-decoration: none;
+}
+
+.next:hover {
+  color: #000;
+}
+
 .pagination {
   display: flex;
   justify-content: flex-end;
