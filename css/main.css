@@ -531,6 +531,11 @@ div.jfilestyle label:hover {
   margin-bottom: 20px;
 }
 
+.comments_content {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
 .comments_link {
   color: #95989A;
   font-size: 14px;
