@@ -1788,12 +1788,14 @@ div.jfilestyle label:hover {
 }
 
 .next {
-  color: #888888;
-  text-decoration: none;
-}
-
-.next:hover {
-  color: #000;
+  background-image: url("../img/next.svg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  font-size: 0;
+  display: block;
 }
 
 .pagination {
