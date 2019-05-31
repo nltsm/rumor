@@ -146,6 +146,18 @@ app.addModule('filestyle', function () {
 		});
 	};
 });
+app.addModule('flash-massage', function () {
+	var self = this;
+	
+	this.init = function () {
+		$('.flash-massage_close').click(function () {
+			self.close();
+		})
+	};
+	this.close = function () {
+		$('.flash-massage').removeClass('__visible');
+	};
+});
 app.addModule('header', function () {
 	this.$header = $('.header');
 	

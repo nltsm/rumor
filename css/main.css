@@ -907,6 +907,42 @@ div.jfilestyle label:hover {
   background: #D4302F;
 }
 
+.flash-massage {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 525px;
+  background: #FFFFFF;
+  padding: 20px 0;
+  transform: translateX(-50%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 120;
+  display: none;
+}
+
+.flash-massage.__visible {
+  display: block;
+}
+
+.flash-massage_text {
+  text-align: center;
+  padding: 0 50px;
+}
+
+.flash-massage_close {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  transform: translateY(-50%);
+  background-image: url("../img/close-btn-black.svg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
 .followers {
   padding: 70px 0;
 }
