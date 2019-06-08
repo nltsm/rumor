@@ -136,7 +136,7 @@ app.addModule('audio', function () {
 });
 app.addModule('filestyle', function () {
 	this.init = function () {
-		$("input[type=file]").each(function () {
+		$("input[type=file]:not(.__no-style)").each(function () {
 			$(this).addClass('jfilestyle');
 			
 			$(this).jfilestyle({
