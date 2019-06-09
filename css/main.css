@@ -257,6 +257,8 @@ body {
   position: relative;
   font: 16px/1.2 'Noto Sans';
   min-width: 1346px;
+  padding-bottom: 255px;
+  min-height: 100vh;
 }
 
 img {
@@ -414,7 +416,7 @@ div.jfilestyle label:hover {
   position: fixed;
   top: 0;
   left: 50%;
-  width: 525px;
+  width: 100%;
   background: #FFFFFF;
   height: 80px;
   z-index: 110;
@@ -449,11 +451,16 @@ div.jfilestyle label:hover {
   font-size: 16px;
   line-height: 21px;
   color: #333333;
+  flex-basis: 0;
+  flex-grow: 1;
+  padding-right: 15px;
 }
 
 .audio-player_row {
   display: flex;
   align-items: center;
+  margin-left: auto;
+  padding-right: 1px;
 }
 
 .audio-player_back {
@@ -523,7 +530,7 @@ div.jfilestyle label:hover {
   position: absolute;
   color: #E2ADAD;
   font-size: 11px;
-  right: 84px;
+  right: 66px;
   top: 3px;
 }
 
@@ -1041,6 +1048,10 @@ div.jfilestyle label:hover {
 .footer {
   padding: 40px 0 20px;
   background: #FFFFFF;
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  right: 0;
 }
 
 .footer_row {
@@ -1827,8 +1838,8 @@ div.jfilestyle label:hover {
   background-image: url("../img/next.svg");
   background-position: top left;
   background-repeat: no-repeat;
-  width: 30px;
-  height: 30px;
+  width: 18px;
+  height: 18px;
   background-size: contain;
   font-size: 0;
   display: block;
@@ -1886,6 +1897,7 @@ div.jfilestyle label:hover {
   flex-grow: 1;
   padding: 12px 20px 12px 22px;
   position: relative;
+  padding-bottom: 55px;
 }
 
 .post_date {
@@ -1936,13 +1948,17 @@ div.jfilestyle label:hover {
 .post_bottom {
   display: flex;
   align-items: center;
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
 }
 
 .post_icons {
   display: flex;
   align-items: center;
   margin-left: 51px;
-  margin-right: -10px;
 }
 
 .post_like {
@@ -2043,7 +2059,7 @@ div.jfilestyle label:hover {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -12px;
   height: 5px;
   display: block;
 }
@@ -2069,7 +2085,7 @@ div.jfilestyle label:hover {
   font-size: 11px;
   display: block;
   left: 22px;
-  bottom: 27px;
+  bottom: 15px;
 }
 
 .profile-edit {
@@ -2524,6 +2540,10 @@ div.jfilestyle label:hover {
   display: block;
 }
 
+.thread > a img {
+  display: block;
+}
+
 .thread_image {
   object-fit: cover;
   width: 100%;
@@ -2531,7 +2551,7 @@ div.jfilestyle label:hover {
 }
 
 .thread.__min .thread_image {
-  height: 166px;
+  height: 190px;
 }
 
 .thread_pic {
@@ -2553,7 +2573,7 @@ div.jfilestyle label:hover {
 }
 
 .thread.__min .thread_content {
-  padding: 15px 18px 41px 17px;
+  padding: 25px 18px 41px 17px;
 }
 
 .thread_title {
@@ -2589,8 +2609,8 @@ div.jfilestyle label:hover {
 }
 
 .thread_bottom {
-  padding-left: 22px;
-  padding-right: 22px;
+  padding-left: 17px;
+  padding-right: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2706,11 +2726,11 @@ div.jfilestyle label:hover {
 }
 
 .thread.__min .thread_player .audioplayer-bar {
-  top: 166px;
+  top: 190px;
 }
 
 .thread.__min .thread_player .audioplayer-playpause {
-  top: 180px;
+  top: 215px;
   width: 36px;
   height: 36px;
   background-image: url("../img/play.svg");
@@ -2728,20 +2748,19 @@ div.jfilestyle label:hover {
 }
 
 .thread.__min .thread_player .audioplayer-time-duration {
-  top: 217px;
-  right: 16px;
+  top: 199px;
+  right: 19px;
 }
 
 .threads {
-  display: flex;
   flex-wrap: wrap;
   margin: 0 -12px 10px;
 }
 
 .threads_item {
-  width: 33.33%;
   padding: 0 12px;
   margin-bottom: 24px;
+  width: 33.333%;
 }
 
 .threads_item.__col-1 {

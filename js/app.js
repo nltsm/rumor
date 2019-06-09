@@ -452,7 +452,9 @@ app.addModule('select', function () {
 });
 app.addModule('thread', function () {
 	this.init = function () {
-		
+		$('.threads.__masonry').masonry({
+			itemSelector: '.threads_item',
+		});
 	};
 });
 jQuery(function () {
