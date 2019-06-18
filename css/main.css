@@ -1575,6 +1575,7 @@ div.jfilestyle label:hover {
   align-items: center;
   color: #888888;
   transition: 0.3s;
+  text-transform: uppercase;
 }
 
 .header_themes-button:hover {
