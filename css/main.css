@@ -543,13 +543,13 @@ div.jfilestyle label:hover {
 }
 
 .audioplayer-playpause:hover {
-  background-image: url('../img/play-white.svg') !important;
+  background-image: url("../img/play-white.svg") !important;
   background-color: #D4302F !important;
 }
 
 .audioplayer.audioplayer-playing .audioplayer-playpause {
   transition: none;
-  background-image: url('../img/pause.svg') !important;
+  background-image: url("../img/pause.svg") !important;
 }
 
 .comments {
