@@ -82,9 +82,9 @@ app.addModule('audio', function () {
 		stopAudiosExceptCurrent(player);
 		
 		if (hasDataToBeInMainPlayer(player)) {			
-			var container = $(player).closest(dataContainer.$block);
-			var imageStyle = container.find(dataContainer.$image).attr('src');
-			var text = container.find(dataContainer.$text).html();
+			var container = $(player).closest($('.thread, .post'));
+			var imageStyle = container.find($('.thread_image, .post_image img')).attr('src');
+			var text = container.find($('.thread_title, .post_text')).html();
 			
 			changeDataInMainPlayer({
 				imageStyle: 'background-image: url(' + imageStyle + ')',
@@ -122,7 +122,7 @@ app.addModule('audio', function () {
 		});
 	}
 	function hasDataToBeInMainPlayer(audioPlayer) {
-		return $(audioPlayer).closest(dataContainer.$block).length;
+		return $(audioPlayer).closest($('.thread, .post')).length;
 	}
 	function changeDataInMainPlayer(data) {
 		mainPlayer.$image.attr('style', data.imageStyle);
