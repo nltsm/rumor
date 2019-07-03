@@ -3188,6 +3188,11 @@ div.jfilestyle label:hover {
     margin-bottom: 30px;
   }
 
+  .left-bar_lang {
+    padding: 0 2px;
+    font-size: 12px;
+  }
+
   .logo {
     top: 12px;
   }
