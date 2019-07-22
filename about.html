@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" href="css/select2.min.css">
+	<link rel="stylesheet" href="css/jquery.scrollbar.css">
+	<link rel="stylesheet" href="css/jquery.scrollbar.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+	<aside class="left-bar">
+		<a href="" class="logo">
+			<img src="img/logo.png" alt="">
+			<span>Rumor</span>
+		</a>
+		
+		<div class="left-bar_buttons">
+			<a href="" class="left-bar_button">
+				<img src="img/login.png" alt="">
+			</a>
+			<a href="" class="left-bar_button">
+				<img src="img/profile.png" alt="">
+			</a>
+		</div>
+	</aside>
+			
+	<div class="about">
+		<div class="about_content">
+			<div class="about_player">
+				<audio style="opacity: 0;" src="music.mp3" preload="none" controls></audio>
+				
+				<svg viewBox="0 0 102 102" id="audio-svg">
+					<circle style="stroke-dasharray: 0, 314;" id="circle" r="50" fill="none" cx="50%" cy="50%" stroke="#D4302F" stroke-width="2"></circle>
+				</svg>
+			</div>
+			
+			<div class="about_text __1">
+				Небольшой текст о проекте Rumor
+				Небольшой текст о проекте Rumor
+				Небольшой текст о проекте Rumor
+			</div>
+			<div class="about_text __2">
+				Небольшой текст о проекте Rumor
+				Небольшой текст о проекте Rumor
+				Небольшой текст о проекте Rumor
+			</div>
+			<div class="about_text __3">
+				Небольшой текст о проекте Rumor
+				Небольшой текст о проекте Rumor
+				Небольшой текст о проекте Rumor
+			</div>
+			<div class="about_text __4">
+				Небольшой текст о проекте Rumor
+				Небольшой текст о проекте Rumor
+				Небольшой текст о проекте Rumor
+			</div>
+		</div>
+	</div>
+
+	<div class="form-block __map mfp-hide" id="form-map">
+		<div class="form-block_head __dark">Местоположение</div>
+		
+		<div class="form-block_content">
+			<div class="form-map">
+				<div class="form-map_layout" data-map data-zoom="15" data-lat="49.988817" data-lng="36.232287" data-content="Площадь Конституции, 22, Харьков, Харьковская область"></div>
+			</div>
+		</div>
+		
+		<div class="form-block_close __white popup-close"></div>
+	</div>
+
+	<div class="form-block __map mfp-hide" id="form-map-search">
+		<div class="form-block_head __dark">Местоположение</div>
+		
+		<div class="form-block_content">
+			<div class="form-map">
+				<div class="form-map_layout" data-map data-zoom="15" data-lat="49.988817" data-lng="36.232287" data-input="searchBox"></div>
+				
+				<div class="form-map_search" id="search-box">
+					<input id="searchBox" type="text" class="form-map_input" placeholder="Введите адрес">
+					<button class="form-map_button">Выбрать адрес</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="form-block_close __white popup-close"></div>
+	</div>
+	
+	<div class="form-block __record mfp-hide" id="form-audio">
+		<div class="form-block_head __dark">Аудио</div>
+		
+		<div class="form-block_content">
+			<div class="form-audio">
+				<div class="form-audio_player">
+					<audio style="opacity: 0;" src="music.mp3" preload="none" controls></audio>
+					
+					<div class="form-audio_player-text">
+						Прослушать аудио
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="form-block_close __white popup-close"></div>
+	</div>
+	
+	<div class="form-info mfp-hide" id="info-form">
+		<div class="form-info_close popup-close"></div>
+		
+		<div class="form-info_text">Вы несёте личную ответственность <br>за свои публикации</div>
+		
+		<div class="form-info_buttons">
+			<a href="#" class="form-info_button popup-close">ОТМЕНА</a>
+			<a href="" class="form-info_button __send">ПРОДОЛЖИТЬ</a>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/select2.min.js"></script>
+	<script src="js/jquery-filestyle.min.js"></script>
+	<script src="js/recorder.js"></script>
+	<script src="js/jquery.scrollbar.min.js"></script>
+	<script src="js/audioplayer.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="js/lib.js"></script>
+	<script src="js/app.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3tlWbCcY4vawcqAwJgbWjP3DqboRywNY&libraries=places&callback=initMap" async defer></script>
+</body>
+</html>

@@ -16,33 +16,33 @@ app.addModule('audio', function () {
 	var currentAudio;
 	var $header;
 	var mainPlayer;
-	
+
 	var dataContainer = {
 		$block: $('.thread, .post'),
 		$image: $('.thread_image, .post_image img'),
 		$text: $('.thread_title, .post_text')
 	};
-	
+
 	this.init = function () {
 		$header = app.getModule('header').$header;
 		mainPlayer = app.getModule('audio-player').mainPlayer;
-		
+
 		this.initAudio();
-		
+
 		click('.audio-player .audioplayer-playpause', function () {
 			$(currentAudio).closest('.audioplayer').find('.audioplayer-playpause')[0].click();
 		});
-		
+
 		click('.audio-player_back', function () {
 			var playPause = $(currentAudio).closest('.threads_item').prev().find('.audioplayer-playpause');
-			
+
 			if (playPause.length) {
 				playPause[0].click();
 			}
 		});
 		click('.audio-player_next', function () {
 			var playPause = $(currentAudio).closest('.threads_item').next().find('.audioplayer-playpause');
-			
+
 			if (playPause.length) {
 				playPause[0].click();
 			}
@@ -55,44 +55,60 @@ app.addModule('audio', function () {
 			}
 		});
 	};
-	
+
 	this.onPlaying = function () {
 		if ($(currentAudio).closest('[data-player]').length) {
 			mainPlayer.$block.addClass('active');
 		} else {
 			mainPlayer.$block.removeClass('active');
 		}
-		
+
 		var player = $(currentAudio).closest('.audioplayer');
-		
+
 		var className = player.attr('class');
 		var duration = player.find('.audioplayer-time-duration').text();
 		var playedBar = player.find('.audioplayer-bar-played').attr('style');
-		
+
 		changeAudioAttributesInMainPlayer({
 			className: className,
 			duration: duration,
 			playedBar: playedBar
-		})
+		});
+
+		if ($('#audio-svg').length) {
+			var widthEl = $('#audio-svg').closest('.about_player').find('.audioplayer-bar-played');
+			var percent = parseFloat(widthEl.css('width'));
+			
+			var radius = 50;
+
+			var p = 2 * 3.14 * radius;
+			var val = percent * p / 100;
+
+			$('#circle').css({
+				'stroke-dasharray': val + ',' + p
+			});
+			
+			$('.about_player').addClass('__stop-animation')
+		}
 	};
-	
+
 	this.onStart = function (player) {
 		currentAudio = player.find('audio').get(0);
-		
+
 		stopAudiosExceptCurrent(player);
-		
-		if (hasDataToBeInMainPlayer(player)) {			
+
+		if (hasDataToBeInMainPlayer(player)) {
 			var container = $(player).closest($('.thread, .post'));
 			var imageStyle = container.find($('.thread_image, .post_image img')).attr('src');
 			var text = container.find($('.thread_title, .post_text')).html();
-			
+
 			changeDataInMainPlayer({
 				imageStyle: 'background-image: url(' + imageStyle + ')',
 				text: text
 			});
 		}
 	};
-	
+
 	this.initAudio = function () {
 		var _this = this;
 		$('audio').each(function () {
@@ -104,30 +120,33 @@ app.addModule('audio', function () {
 			}
 		});
 	};
-	
+
 	this.playAudio = function (audio) {
 		$(audio).closest('.audioplayer').find('.audioplayer-playpause').click();
 	};
-	
+
 	function stopAudiosExceptCurrent(audioPlayer) {
 		$('.audioplayer-playing .audioplayer-playpause')
-			.not($(audioPlayer).find('.audioplayer-playpause'))
-			.not('.audio-player .audioplayer-playpause')
-			.each(function () {
-				this.click();
-			});
+		.not($(audioPlayer).find('.audioplayer-playpause'))
+		.not('.audio-player .audioplayer-playpause')
+		.each(function () {
+			this.click();
+		});
 
 		$('audio').not(currentAudio).each(function () {
 			this.currentTime = 0;
 		});
 	}
+
 	function hasDataToBeInMainPlayer(audioPlayer) {
 		return $(audioPlayer).closest($('.thread, .post')).length;
 	}
+
 	function changeDataInMainPlayer(data) {
 		mainPlayer.$image.attr('style', data.imageStyle);
 		mainPlayer.$text.html(data.text);
 	}
+
 	function changeAudioAttributesInMainPlayer(attributes) {
 		mainPlayer.$audioPlayer.attr('class', attributes.className);
 		mainPlayer.duration.html(attributes.duration);
@@ -396,6 +415,14 @@ app.addModule('popup', function () {
 			e.preventDefault();
 			$.magnificPopup.close();
 		});
+	};
+});
+app.addModule('post', function () {
+	this.init = function () {
+		$('.post_slider').slick({
+			arrows: false,
+			dots: true
+		})
 	};
 });
 app.addModule('profile-info', function () {

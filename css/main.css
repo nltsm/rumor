@@ -415,6 +415,131 @@ div.jfilestyle label:hover {
   color: #376692;
 }
 
+.about {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  padding-left: 100px;
+  pointer-events: none;
+  z-index: 1;
+  background-color: #fff !important;
+}
+
+.about_content {
+  pointer-events: auto;
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/about.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.about_player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: -50px;
+  margin-top: 10px;
+}
+
+.about_player .audioplayer > * {
+  display: none;
+}
+
+.about_player .audioplayer-playpause {
+  width: 100px;
+  height: 100px;
+  background: #D4302F;
+  background-image: url("../img/play-white.svg");
+  background-position: center left 40px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  background-size: 30px auto;
+  animation: pulse 2s infinite;
+}
+
+.about_player.__stop-animation .audioplayer-playpause {
+  animation: none;
+}
+
+.about_player .audioplayer.audioplayer-playing .audioplayer-playpause {
+  background: url(../img/pause-2.svg) center center no-repeat !important;
+  background-size: 19px auto !important;
+  background-color: #fff;
+  border: 2px solid #E4E4E4;
+}
+
+.about_player svg {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.about_player circle {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-dasharray: 0, 376;
+}
+
+.about_text {
+  font-size: 12px;
+  width: 130px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #888888;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about_text.__1 {
+  margin-top: -185px;
+  margin-left: -239px;
+  font-style: italic;
+  color: #888888;
+}
+
+.about_text.__2 {
+  margin-top: 116px;
+  margin-left: -347px;
+  color: #333333;
+}
+
+.about_text.__3 {
+  margin-top: 116px;
+  margin-left: 473px;
+}
+
+.about_text.__4 {
+  margin-top: 322px;
+  margin-left: 267px;
+  font-weight: 700;
+  color: #D4302F;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(212, 48, 47, 0.2);
+  }
+
+  100% {
+    box-shadow: 0 0 0 35px rgba(212, 48, 47, 0);
+  }
+}
+
 .audio-player {
   position: fixed;
   top: 0;
@@ -1902,7 +2027,7 @@ div.jfilestyle label:hover {
   width: 100px;
   top: 0;
   bottom: 0;
-  z-index: 10;
+  z-index: 100;
   background: #ffffff;
   box-shadow: 1px 0 2px rgba(0, 0, 0, 0.12);
   left: 0;
@@ -1927,7 +2052,6 @@ div.jfilestyle label:hover {
 
 .left-bar_langs {
   display: flex;
-  justify-content: center;
 }
 
 .left-bar_lang {
@@ -1935,10 +2059,19 @@ div.jfilestyle label:hover {
   text-decoration: none;
   color: #000;
   font-size: 14px;
+  display: none;
 }
 
 .left-bar_lang.active {
   color: #D4302F;
+}
+
+.left-bar_lang:first-child {
+  display: block;
+}
+
+.left-bar_langs:hover .left-bar_lang {
+  display: block;
 }
 
 .logo {
@@ -2054,10 +2187,47 @@ div.jfilestyle label:hover {
   position: relative;
 }
 
+.post_slider {
+  width: 360px;
+}
+
+.post_slider .slick-list,
+.post_slider .slick-track,
+.post_slider .slick-slide {
+  height: 100%;
+}
+
+.post_slider .slick-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.post_slider .slick-dots li {
+  margin: 0 5px;
+}
+
+.post_slider .slick-dots li button {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 0;
+}
+
+.post_slider .slick-dots li.slick-active button {
+  background: #D4302F;
+}
+
 .post_image {
   width: 360px;
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100%;
 }
 
 .post_image img {
@@ -2999,6 +3169,10 @@ div.jfilestyle label:hover {
 @media screen and (max-width: 1340px) {
   body {
     padding-bottom: 0;
+  }
+
+  .about {
+    padding-left: 50px;
   }
 
   .audio-player {
