@@ -3116,6 +3116,7 @@ div.jfilestyle label:hover {
 
 .threads {
   flex-wrap: wrap;
+  display: flex;
   margin: 0 -12px 10px;
 }
 
@@ -3867,6 +3868,10 @@ div.jfilestyle label:hover {
 
   .post {
     display: block;
+  }
+
+  .post_slider {
+    width: 100%;
   }
 
   .post_image {
