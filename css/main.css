@@ -2867,6 +2867,26 @@ div.jfilestyle label:hover {
   color: #000;
 }
 
+.profile-info_user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.profile-info_user img {
+  width: 39px;
+  border-radius: 50%;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.profile-info_user span {
+  font-size: 17px;
+  color: #888888;
+}
+
 .profile {
   width: 725px;
   margin: 0 auto;
@@ -3479,6 +3499,14 @@ div.jfilestyle label:hover {
 
   .profile-info_edit {
     margin-left: 0;
+  }
+
+  .profile-info_user img {
+    margin-right: 5px;
+  }
+
+  .profile-info_user span {
+    font-size: 14px;
   }
 
   .profile {
