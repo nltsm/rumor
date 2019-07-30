@@ -115,7 +115,10 @@ app.addModule('audio', function () {
 			if (!$(this).closest('.audioplayer').length) {
 				$(this).audioPlayer({
 					onPlaying: _this.onPlaying,
-					onStart: _this.onStart
+					onStart: _this.onStart,
+					onStop: function () {
+						$('.audio-player_player .audioplayer').removeClass('audioplayer-playing');
+					}
 				});
 			}
 		});

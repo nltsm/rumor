@@ -134,6 +134,7 @@
 
                 theAudio.addEventListener('ended', function() {
                     thePlayer.removeClass(cssClass.playing);
+                    params.onStop.call(thePlayer, thePlayer);
                 });
                 
                 $(theAudio).on('playing timeupdate', params.onPlaying);

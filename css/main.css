@@ -2960,7 +2960,9 @@ div.jfilestyle label:hover {
   text-decoration: none;
   display: block;
   padding-right: 45px;
-  min-height: 46px;
+  height: 46px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .thread_title:hover {
@@ -3522,7 +3524,7 @@ div.jfilestyle label:hover {
   }
 
   .thread_title {
-    min-height: 38px;
+    height: 38px;
     font-size: 13px;
     line-height: 1.5;
   }
@@ -3923,7 +3925,7 @@ div.jfilestyle label:hover {
   }
 
   .thread_title {
-    min-height: 0;
+    height: auto;
   }
 
   .thread.__min .thread_title {
