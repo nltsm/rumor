@@ -553,7 +553,7 @@ app.addModule('safari', function () {
 	this.init = function () {
 		var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
-		if (isSafari) {
+		if (isSafari && $('#safari-info').length) {
 			openForm('#safari-info');
 		}
 	};
