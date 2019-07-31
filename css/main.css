@@ -1464,11 +1464,12 @@ div.jfilestyle label:hover {
 
 .form-info {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  width: 440px;
+  width: 500px;
   background: #FFFFFF;
   position: relative;
   padding: 50px 38px 23px;
   margin: 20px auto;
+  border-radius: 4px;
 }
 
 .form-info_close {
@@ -1512,6 +1513,15 @@ div.jfilestyle label:hover {
 .form-info_button.__send {
   font-weight: 700;
   color: #D4302F;
+}
+
+.form-info_image {
+  width: 75px;
+  height: 75px;
+  background-image: url("../img/problem.svg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  margin: 0 auto 50px;
 }
 
 .form-map {
@@ -2236,7 +2246,7 @@ div.jfilestyle label:hover {
   width: 1%;
   flex-grow: 1;
   position: relative;
-  padding: 12px 20px 55px 22px;
+  padding: 12px 20px 75px 22px;
 }
 
 .post_date {
@@ -2427,8 +2437,23 @@ div.jfilestyle label:hover {
   color: #E2ADAD;
   font-size: 11px;
   display: block;
+  left: 50%;
+  top: -20px;
+  transform: translateX(-50%);
+}
+
+.post_view {
+  color: #CCCCCC;
+  font-size: 13px;
+  line-height: 21px;
+  padding-left: 30px;
+  margin-right: 10px;
+  position: absolute;
   left: 22px;
-  bottom: 15px;
+  background-image: url("../img/speaker.svg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
 }
 
 .profile-edit {
@@ -3030,6 +3055,19 @@ div.jfilestyle label:hover {
   background-image: url("../img/like-active.svg");
   background-position: top left;
   background-repeat: no-repeat;
+}
+
+.thread_view {
+  color: #CCCCCC;
+  font-size: 13px;
+  margin-left: auto;
+  background-image: url("../img/speaker.svg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
+  line-height: 21px;
+  padding-right: 30px;
+  margin-right: 15px;
 }
 
 .thread_player .audioplayer > * {

@@ -549,6 +549,15 @@ app.addModule('record', function () {
 		}
 	};
 });
+app.addModule('safari', function () {
+	this.init = function () {
+		var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+		if (isSafari) {
+			openForm('#safari-info');
+		}
+	};
+});
 app.addModule('scrollbar', function () {
 	this.init = function () {
 		try {
