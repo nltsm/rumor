@@ -2929,6 +2929,9 @@ div.jfilestyle label:hover {
 .thread {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.14);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .thread > a {

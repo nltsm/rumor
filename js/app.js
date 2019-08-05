@@ -590,10 +590,9 @@ app.addModule('select', function () {
 app.addModule('thread', function () {
 	var threads = $('.threads.__masonry');
 	var masonryInitialized = false;
+	var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 	
 	this.init = function () {
-		var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-		
 		if (! isSafari) {
 			toggleMasonry();
 		
@@ -602,7 +601,9 @@ app.addModule('thread', function () {
 	};
 	
 	this.refresh = function () {
-		threads.masonry('reloadItems').masonry();
+		if (! isSafari) {
+			threads.masonry('reloadItems').masonry();
+		}
 	};
 	
 	function toggleMasonry() {
