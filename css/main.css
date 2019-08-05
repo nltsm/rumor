@@ -2451,7 +2451,7 @@ div.jfilestyle label:hover {
   position: absolute;
   left: 22px;
   background-image: url("../img/speaker.svg");
-  background-position: top left;
+  background-position: left center;
   background-repeat: no-repeat;
   background-size: 21px 21px;
 }
@@ -3458,10 +3458,6 @@ div.jfilestyle label:hover {
     margin-left: 5px;
   }
 
-  .post_player .audioplayer-time-duration {
-    left: 10px;
-  }
-
   .profile-edit_left {
     width: auto;
   }
@@ -4008,6 +4004,23 @@ div.jfilestyle label:hover {
 
   .footer_app {
     margin: 0 10px;
+  }
+
+  .post_favorite {
+    width: 17px;
+    height: 14px;
+    background-size: contain;
+  }
+
+  .post_bookmark {
+    width: 17px;
+    height: 16px;
+    background-size: contain;
+  }
+
+  .post_view {
+    background-size: 16px 16px;
+    padding-left: 25px;
   }
 
   .profile-edit {

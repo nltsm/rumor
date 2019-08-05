@@ -554,7 +554,7 @@ app.addModule('safari', function () {
 		var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 		if (isSafari && $('#safari-info').length) {
-			openForm('#safari-info');
+			//openForm('#safari-info');
 		}
 	};
 });
@@ -592,9 +592,13 @@ app.addModule('thread', function () {
 	var masonryInitialized = false;
 	
 	this.init = function () {
-		toggleMasonry();
+		var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 		
-		$(window).on('resize', toggleMasonry)
+		if (! isSafari) {
+			toggleMasonry();
+		
+			$(window).on('resize', toggleMasonry)
+		}
 	};
 	
 	this.refresh = function () {
