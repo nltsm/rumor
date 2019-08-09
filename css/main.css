@@ -2253,7 +2253,7 @@ div.jfilestyle label:hover {
   font-size: 12px;
   color: #CCCCCC;
   text-align: right;
-  margin-bottom: -8px;
+  margin-bottom: 5px;
 }
 
 .post_user {
@@ -3944,10 +3944,6 @@ div.jfilestyle label:hover {
   .post_content {
     width: auto;
     padding: 10px 15px 55px;
-  }
-
-  .post_date {
-    margin-bottom: 2px;
   }
 
   .profile-info {
