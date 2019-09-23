@@ -3706,6 +3706,7 @@ div.jfilestyle label:hover {
   .audio-player {
     height: 70px;
     padding: 0 10px;
+    left: 20px;
   }
 
   .audio-player_text {
@@ -4060,8 +4061,8 @@ div.jfilestyle label:hover {
 
 @media screen and (max-width: 481px) {
   .audio-player {
-    left: 60px;
     right: 10px;
+    left: 10px;
   }
 
   .audio-player_image {
