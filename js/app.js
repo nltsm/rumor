@@ -244,7 +244,7 @@ app.addModule('header', function () {
 		var langs = $('.left-bar_langs').clone(true, true).addClass('__cloned');
 		
 		headerMobile.append(wrap);
-		wrap.append(search, back, nav, link, themes, login, profile, langs, logo);
+		wrap.append(logo, search, back, nav, link, themes, login, profile, langs);
 		
 		openMenuBtn.on('click', function () {
 			if ($(window).width() > 768) return;

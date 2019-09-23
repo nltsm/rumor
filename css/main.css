@@ -2085,10 +2085,15 @@ div.jfilestyle label:hover {
   display: block;
 }
 
-.left-bar_langs.__cloned {
+.left-bar_row {
+  display: flex;
+  align-items: flex-end;
   margin-bottom: 15px;
-  margin-top: 40px;
-  justify-content: center;
+}
+
+.left-bar_langs.__cloned {
+  margin-bottom: 0;
+  padding-bottom: 1px;
 }
 
 .left-bar_langs.__cloned .left-bar_lang {
@@ -2124,7 +2129,7 @@ div.jfilestyle label:hover {
   position: static;
   transform: none;
   display: block;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .logo img {
