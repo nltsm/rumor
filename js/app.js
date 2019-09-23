@@ -238,9 +238,13 @@ app.addModule('header', function () {
 		var link = $('.header_link').clone(true, true).addClass('__cloned');
 		var search = $('.header_search').clone(true, true).addClass('__cloned');
 		var themes = $('.header_themes').clone(true, true).addClass('__cloned');
+		var login = $('.left-bar_button.__login').clone(true, true).addClass('__cloned').html('Войти');
+		var profile = $('.left-bar_button.__profile').clone(true, true).addClass('__cloned').html('Личный кабинет');
+		var logo = $('.logo').clone(true, true).addClass('__cloned');
+		var langs = $('.left-bar_langs').clone(true, true).addClass('__cloned');
 		
 		headerMobile.append(wrap);
-		wrap.append(search, back, nav, link, themes);
+		wrap.append(search, back, nav, link, themes, login, profile, langs, logo);
 		
 		openMenuBtn.on('click', function () {
 			if ($(window).width() > 768) return;
