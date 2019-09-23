@@ -3829,11 +3829,11 @@ div.jfilestyle label:hover {
 
   .header_search-input {
     padding: 10px 0;
+    padding-right: 15px;
     border-bottom: 1px solid #CCCCCC;
     font-size: 15px;
     background-size: 15px 15px;
     background-position: right center;
-    text-transform: uppercase;
   }
 
   .header_themes {

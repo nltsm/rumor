@@ -233,11 +233,11 @@ app.addModule('header', function () {
 		self.$header.append(layout);
 		
 		var wrap = $('<div />').addClass('header_mobile-wrap');
-		var nav = $('.header_nav').clone().addClass('__cloned');
-		var back = $('.header_back').clone().addClass('__cloned');
-		var link = $('.header_link').clone().addClass('__cloned');
-		var search = $('.header_search').clone().addClass('__cloned');
-		var themes = $('.header_themes').clone().addClass('__cloned');
+		var nav = $('.header_nav').clone(true, true).addClass('__cloned');
+		var back = $('.header_back').clone(true, true).addClass('__cloned');
+		var link = $('.header_link').clone(true, true).addClass('__cloned');
+		var search = $('.header_search').clone(true, true).addClass('__cloned');
+		var themes = $('.header_themes').clone(true, true).addClass('__cloned');
 		
 		headerMobile.append(wrap);
 		wrap.append(search, back, nav, link, themes);
