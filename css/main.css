@@ -4040,6 +4040,10 @@ div.jfilestyle label:hover {
     min-height: 0;
   }
 
+  .thread_player .audioplayer-bar-loaded {
+    height: 8px;
+  }
+
   .threads_item {
     width: 50%;
   }
@@ -4144,11 +4148,5 @@ div.jfilestyle label:hover {
 
   .threads_item.__col-2 {
     width: 100%;
-  }
-}
-
-@media 767px {
-  .thread_player .audioplayer-bar-loaded {
-    height: 8px;
   }
 }
