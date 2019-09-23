@@ -2932,6 +2932,8 @@ div.jfilestyle label:hover {
   display: flex;
   flex-direction: column;
   height: 100%;
+  z-index: 1;
+  background: #ffffff;
 }
 
 .thread > a {
@@ -2939,6 +2941,9 @@ div.jfilestyle label:hover {
   background-repeat: no-repeat;
   height: 190px;
   display: block;
+  position: relative;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .thread > a img {
@@ -2967,14 +2972,20 @@ div.jfilestyle label:hover {
   border-radius: 50%;
 }
 
+.thread_pic a {
+  pointer-events: auto;
+}
+
 .thread_content {
-  padding: 20px 18px 41px 17px;
+  padding: 0 18px 41px 17px;
   background: #FFFFFF;
   flex-grow: 1;
+  margin-top: 20px;
 }
 
 .thread.__min .thread_content {
-  padding: 25px 18px 41px 17px;
+  padding: 0 18px 41px 17px;
+  margin-top: 25px;
 }
 
 .thread_title {
@@ -2988,6 +2999,7 @@ div.jfilestyle label:hover {
   height: 46px;
   overflow: hidden;
   text-overflow: ellipsis;
+  pointer-events: auto;
 }
 
 .thread_title:hover {
@@ -3070,8 +3082,22 @@ div.jfilestyle label:hover {
   margin-right: 15px;
 }
 
+.thread_player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 20;
+  pointer-events: none;
+}
+
 .thread_player .audioplayer > * {
   display: none;
+}
+
+.thread_player * {
+  pointer-events: auto;
 }
 
 .thread_player .audioplayer-playpause {
@@ -3554,7 +3580,8 @@ div.jfilestyle label:hover {
   }
 
   .thread_content {
-    padding: 10px 10px 41px;
+    padding: 0 10px 41px;
+    margin-top: 20px;
   }
 
   .thread_title {
@@ -3564,7 +3591,7 @@ div.jfilestyle label:hover {
   }
 
   .thread_player .audioplayer-playpause {
-    top: 140px;
+    top: 150px;
     width: 30px;
     height: 30px;
     background-position: center left 10px;
@@ -3577,7 +3604,7 @@ div.jfilestyle label:hover {
 
   .thread_player .audioplayer-time-duration {
     right: 18px;
-    top: 130px;
+    top: 135px;
     font-size: 9px;
   }
 
