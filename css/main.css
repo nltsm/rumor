@@ -3656,7 +3656,7 @@ div.jfilestyle label:hover {
 
   .thread_player .audioplayer-time-duration {
     right: 18px;
-    top: 135px;
+    top: 138px;
     font-size: 9px;
   }
 
@@ -4071,11 +4071,7 @@ div.jfilestyle label:hover {
   }
 
   .thread_player .audioplayer-playpause {
-    top: 160px;
-  }
-
-  .thread_player .audioplayer-time-duration {
-    top: 145px;
+    top: 150px;
   }
 
   .threads_item {
