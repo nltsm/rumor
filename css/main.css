@@ -3051,6 +3051,7 @@ div.jfilestyle label:hover {
   overflow: hidden;
   text-overflow: ellipsis;
   pointer-events: auto;
+  font-weight: 600;
 }
 
 .thread_title:hover {
