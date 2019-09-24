@@ -1596,6 +1596,14 @@ div.jfilestyle label:hover {
   z-index: 10;
 }
 
+.header.__mobile-only {
+  display: none;
+}
+
+.header.__padding {
+  padding: 10px;
+}
+
 .header.__created {
   display: none;
 }
@@ -3703,6 +3711,18 @@ div.jfilestyle label:hover {
     overflow: hidden;
   }
 
+  .about {
+    padding-left: 0;
+  }
+
+  .about_content {
+    padding: 0 10px;
+  }
+
+  .about_text {
+    display: none;
+  }
+
   .audio-player {
     height: 70px;
     padding: 0 10px;
@@ -3830,6 +3850,10 @@ div.jfilestyle label:hover {
   .form-map_button {
     width: auto;
     font-size: 12px;
+  }
+
+  .header.__mobile-only {
+    display: flex;
   }
 
   .header.__created {
@@ -4060,6 +4084,28 @@ div.jfilestyle label:hover {
 }
 
 @media screen and (max-width: 481px) {
+  .about {
+    height: 400px;
+  }
+
+  .about_content {
+    background-image: url("../img/about-mobile.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .about_player {
+    margin-top: 4px;
+    margin-left: 4px;
+  }
+
+  .about_player .audioplayer-playpause {
+    width: 80px;
+    height: 80px;
+    background-position: center left 30px;
+  }
+
   .audio-player {
     right: 10px;
     left: 10px;
