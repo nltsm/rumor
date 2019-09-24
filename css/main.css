@@ -3652,7 +3652,6 @@ div.jfilestyle label:hover {
 
   .thread_player .audioplayer-bar {
     top: 130px;
-    height: 8px;
   }
 
   .thread_player .audioplayer-time-duration {
@@ -4071,10 +4070,6 @@ div.jfilestyle label:hover {
     min-height: 0;
   }
 
-  .thread_player .audioplayer-bar-loaded {
-    height: 8px;
-  }
-
   .threads_item {
     width: 50%;
   }
@@ -4098,13 +4093,23 @@ div.jfilestyle label:hover {
 
   .about_player {
     margin-top: 4px;
-    margin-left: 4px;
+    margin-left: 1px;
   }
 
   .about_player .audioplayer-playpause {
-    width: 80px;
-    height: 80px;
-    background-position: center left 30px;
+    width: 75px;
+    height: 75px;
+    background-position: center left 29px;
+    background-size: 25px auto;
+  }
+
+  .about_player svg {
+    width: 75px;
+    height: 75px;
+  }
+
+  .about_player circle {
+    stroke-dasharray: 0, 376;
   }
 
   .audio-player {
