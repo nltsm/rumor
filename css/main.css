@@ -3633,7 +3633,7 @@ div.jfilestyle label:hover {
 
   .thread_content {
     padding: 0 10px 41px;
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
   .thread_title {
@@ -4068,6 +4068,14 @@ div.jfilestyle label:hover {
 
   .thread.__min .thread_title {
     min-height: 0;
+  }
+
+  .thread_player .audioplayer-playpause {
+    top: 160px;
+  }
+
+  .thread_player .audioplayer-time-duration {
+    top: 145px;
   }
 
   .threads_item {
