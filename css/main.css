@@ -2398,6 +2398,7 @@ div.jfilestyle label:hover {
   margin-left: 15px;
   position: relative;
   top: -2px;
+  background-size: contain;
 }
 
 .post_bookmark.active,
@@ -3012,11 +3013,7 @@ div.jfilestyle label:hover {
 }
 
 .thread_pic {
-  position: absolute;
-  width: 32px;
-  border-radius: 50%;
-  right: 15px;
-  top: 15px;
+  margin-bottom: 15px;
 }
 
 .thread_pic img {
@@ -3025,6 +3022,20 @@ div.jfilestyle label:hover {
 
 .thread_pic a {
   pointer-events: auto;
+  display: flex;
+  align-items: center;
+  color: #000;
+  text-decoration: none;
+}
+
+.thread_pic a img {
+  flex-shrink: 0;
+  width: 32px;
+  margin-right: 10px;
+}
+
+.thread_pic a span {
+  font-size: 14px;
 }
 
 .thread_content {
@@ -3083,7 +3094,6 @@ div.jfilestyle label:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 18px;
   position: absolute;
   bottom: 23px;
   left: 0;
@@ -3108,10 +3118,11 @@ div.jfilestyle label:hover {
 
 .thread_favorite {
   width: 20px;
-  height: 17px;
+  height: 18px;
   background-image: url("../img/like.svg");
   background-position: top left;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .thread_favorite.active,
@@ -3128,9 +3139,9 @@ div.jfilestyle label:hover {
   background-image: url("../img/speaker.svg");
   background-position: right center;
   background-repeat: no-repeat;
-  background-size: 21px 21px;
+  background-size: 14px 18px;
   line-height: 21px;
-  padding-right: 30px;
+  padding-right: 25px;
   margin-right: 15px;
 }
 
@@ -3532,10 +3543,6 @@ div.jfilestyle label:hover {
     margin-right: 5px;
   }
 
-  .post_bookmark {
-    margin-left: 5px;
-  }
-
   .profile-edit_left {
     width: auto;
   }
@@ -3623,10 +3630,6 @@ div.jfilestyle label:hover {
     width: auto;
   }
 
-  .thread > a {
-    height: 130px;
-  }
-
   .thread.__min > a {
     height: 190px;
   }
@@ -3643,25 +3646,16 @@ div.jfilestyle label:hover {
   }
 
   .thread_player .audioplayer-playpause {
-    top: 150px;
     width: 30px;
     height: 30px;
     background-position: center left 10px;
-    background-size: 10px 11px;
-  }
-
-  .thread_player .audioplayer-bar {
-    top: 130px;
+    background-size: 12px 13px;
   }
 
   .thread_player .audioplayer-time-duration {
     right: 18px;
     top: 138px;
     font-size: 9px;
-  }
-
-  .thread.__min .thread_player .audioplayer-bar {
-    top: 130px;
   }
 
   .threads {
@@ -3975,6 +3969,10 @@ div.jfilestyle label:hover {
     margin-bottom: 20px;
   }
 
+  .header_back.__header {
+    display: block;
+  }
+
   .header_link {
     display: none;
   }
@@ -4070,8 +4068,13 @@ div.jfilestyle label:hover {
     min-height: 0;
   }
 
-  .thread_player .audioplayer-playpause {
-    top: 150px;
+  .thread_bottom {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .thread_info {
+    font-size: 12px;
   }
 
   .threads_item {
@@ -4153,12 +4156,6 @@ div.jfilestyle label:hover {
   .post_favorite {
     width: 17px;
     height: 14px;
-    background-size: contain;
-  }
-
-  .post_bookmark {
-    width: 17px;
-    height: 16px;
     background-size: contain;
   }
 
