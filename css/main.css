@@ -3020,7 +3020,7 @@ div.jfilestyle label:hover {
   border-radius: 50%;
 }
 
-.thread_pic a {
+.thread_pic-inner {
   pointer-events: auto;
   display: flex;
   align-items: center;
@@ -3028,14 +3028,14 @@ div.jfilestyle label:hover {
   text-decoration: none;
 }
 
-.thread_pic a img {
+.thread_pic-inner span {
+  font-size: 14px;
+}
+
+.thread_pic-inner img {
   flex-shrink: 0;
   width: 32px;
   margin-right: 10px;
-}
-
-.thread_pic a span {
-  font-size: 14px;
 }
 
 .thread_content {
